@@ -150,6 +150,26 @@ a:hover {
   border-radius: 2px;
 }
 
+.content h2 {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  padding: 0.22em;
+  background-color: hsl(48, 10%, 84%);
+  color: hsl(48, 10%, 16%);
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.content h2 a {
+  color: hsl(211, 88%, 14%);
+}
+
+.content h2 a:hover,
+.content h2 a:focus {
+  color: hsl(211, 88%, 30%);
+}
+
 .content p {
   color: hsl(211, 18%, 24%);
   max-width: 47ch;
