@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+  </head>
+  <style>
+    :root {
+      --mobile: 725px;
+    }
+
+    @font-face {
+      font-family: JetBrainsMono;
+      src: url("./JetBrainsMono-Regular.woff");
+    }
+
+    @font-face {
+      font-family: JetBrainsMono;
+      src: url("./JetBrainsMono-ExtraBold.woff");
+      font-weight: 800;
+    }
+
+    body {
+      font-family: JetBrainsMono;
+      background-color: #f7f6f1;
+    }
+
+    .main {
+      display: grid;
+      max-width: 51em;
+      margin: 0 auto;
+      padding: 1em;
+    }
+
+    @media screen and (min-width: 725px) {
+      .main {
+        grid-template-columns: auto 1fr;
+        grid-gap: 3em;
+      }
+    }
+
+    @media screen and (min-width: 1025px) {
+      .main {
+        margin-top: 3em;
+        max-width: 74em;
+        grid-template-columns: auto auto 1fr;
+      }
+    }
+
+    .header {
+      grid-column: span 2;
+    }
+
+    @media screen and (min-width: 426px) {
+      .header {
+        grid-column: span 2;
+      }
+    }
+
+    @media screen and (min-width: 1025px) {
+      .header {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+
+    .header a {
+      display: block;
+      max-width: 15em;
+      background-color: #4f4d4a;
+      margin: 1em auto;
+      padding: 0.7em;
+      border: 6px solid hsl(48, 10%, 84%);
+      border-radius: 2px;
+    }
+
+    @media screen and (min-width: 1025px) {
+      .header a {
+        margin: 0;
+      }
+    }
+
+    .logo {
+      display: block;
+      max-width: 100%;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.5em;
+      margin-bottom: 1.5em;
+    }
+
+    @media screen and (min-width: 725px) {
+      .nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        grid-row: 2;
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (min-width: 1025px) {
+      .nav {
+        align-items: flex-start;
+        grid-row: 1;
+      }
+    }
+
+    .nav a {
+      margin-right: 0.5em;
+      padding: 1em;
+      color: hsl(48, 10%, 44%);
+    }
+
+    .nav a.active {
+      color: hsl(211, 88%, 14%);
+    }
+
+    a {
+      color: hsl(15, 91%, 57%);
+    }
+
+    a:focus,
+    a:hover {
+      color: hsl(211, 88%, 14%);
+    }
+
+    .content {
+      grid-row: 3;
+    }
+
+    @media screen and (min-width: 725px) {
+      .content {
+        grid-row: 2;
+      }
+    }
+
+    @media screen and (min-width: 1025px) {
+      .content {
+        grid-row: 1;
+      }
+    }
+
+    .content h1 {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0.75em;
+      padding: 0.22em;
+      background-color: hsl(48, 10%, 84%);
+      color: hsl(48, 10%, 16%);
+      font-weight: 800;
+      border-radius: 2px;
+    }
+
+    .content p {
+      color: hsla(211, 18%, 24%, 1);
+      max-width: 47ch;
+      font-size: 1.12em;
+      line-height: 1.45;
+    }
+
+    .content p:not(:last-child) {
+      margin-bottom: 1.45em;
+    }
+
+    .profile-picture {
+      display: block;
+      max-width: 200px;
+      border-radius: 50%;
+      box-shadow: 3px 8px 0 hsl(48, 10%, 84%);
+      margin: 1em auto;
+    }
+
+    .content img {
+      display: block;
+      max-width: 100%;
+      box-shadow: 0 0 0 2px hsl(211, 88%, 14%);
+      margin-bottom: 0.5em;
+    }
+  </style>
+  <body>
+    <main class="main">
+      <header class="header">
+        <a href="#">
+          <img
+            class="logo"
+            src="./logo.svg"
+            alt="Say-Katsu Logo in Graffiti bubble letter variation."
+          />
+        </a>
+      </header>
+
+      <nav class="nav">
+        <a href="#" class="active">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <section class="content">
+        <header>
+          <h1>About</h1>
+        </header>
+
+        <p>
+          Yo! I am a Software Engineer with a focus on highly performant web
+          applications written in JavaScript. I've lived all over the United
+          States: Portland, San Francisco, Austin, NYC, etc., but I'm currently
+          based out of Nashville, TN. I love traveling, teaching, art, music,
+          biking, climbing rocks (big and small), and long walks on the beach.
+        </p>
+
+        <p>
+          While in New York City I voluntereed at
+          <a href="https://codenation.org/">Code Nation</a>, teaching web
+          development in under-resourced high schools. If you're in NY or SF
+          consider volunteering some of your time.
+        </p>
+
+        <p>
+          <img src="gunks.jpg" alt="" />
+          <small>Cascading Crystal Kaleidoscope 5.7; Gunks, NY</small>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
