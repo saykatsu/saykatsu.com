@@ -195,3 +195,8 @@ a:hover {
   box-shadow: 0 0 0 2px hsl(211, 88%, 14%);
   margin-bottom: 0.5em;
 }
+
+.inboxLink:after {
+  content: "@saykatsu.com";
+  user-select: all;
+}
